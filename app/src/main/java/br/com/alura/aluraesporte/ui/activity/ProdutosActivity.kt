@@ -17,11 +17,12 @@ class ProdutosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.produtos_activity)
+
         if (savedInstanceState == null) {
-            val produtosFragment: ListaProdutosFragment by inject()
-            transacaoFragment {
-                replace(R.id.container, produtosFragment)
-            }
+//            val produtosFragment: ListaProdutosFragment by inject()
+//            transacaoFragment {
+//                replace(R.id.container, produtosFragment)
+//            }
         }
     }
 
