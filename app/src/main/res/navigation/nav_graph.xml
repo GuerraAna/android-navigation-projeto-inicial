@@ -10,18 +10,49 @@
 		android:id="@+id/listaProdutos"
 		android:name="br.com.alura.aluraesporte.ui.fragment.ListaProdutosFragment"
 		android:label="Lista de Produtos"
-		tools:layout="@layout/lista_produtos" />
+		tools:layout="@layout/lista_produtos">
+		<action
+			android:id="@+id/acao_lista_produtos_para_detalhes_produto"
+			app:destination="@id/detalhesProduto"
+			app:enterAnim="@anim/nav_default_enter_anim"
+			app:exitAnim="@anim/nav_default_exit_anim"
+			app:popEnterAnim="@anim/nav_default_enter_anim"
+			app:popExitAnim="@anim/nav_default_exit_anim" />
+	</fragment>
 
 	<fragment
 		android:id="@+id/detalhesProduto"
 		android:name="br.com.alura.aluraesporte.ui.fragment.DetalhesProdutoFragment"
 		android:label="Detalhes do produto"
-		tools:layout="@layout/detalhes_produto" />
+		tools:layout="@layout/detalhes_produto">
+		<action
+			android:id="@+id/acao_detalhes_do_produto_para_pagamento"
+			app:destination="@id/pagamento"
+			app:enterAnim="@anim/nav_default_enter_anim"
+			app:exitAnim="@anim/nav_default_exit_anim"
+			app:popEnterAnim="@anim/nav_default_enter_anim"
+			app:popExitAnim="@anim/nav_default_exit_anim" />
+		<argument
+			android:name="produtoId"
+			app:argType="long" />
+	</fragment>
 
 	<fragment
 		android:id="@+id/pagamento"
 		android:name="br.com.alura.aluraesporte.ui.fragment.PagamentoFragment"
 		android:label="Pagamento"
-		tools:layout="@layout/pagamento" />
+		tools:layout="@layout/pagamento">
+		<action
+			android:id="@+id/acao_pagamento_para_lista_produto"
+			app:destination="@id/listaProdutos"
+			app:enterAnim="@anim/nav_default_enter_anim"
+			app:exitAnim="@anim/nav_default_exit_anim"
+			app:popEnterAnim="@anim/nav_default_enter_anim"
+			app:popExitAnim="@anim/nav_default_exit_anim"
+			app:popUpTo="@id/nav_graph" />
+		<argument
+			android:name="produtoId"
+			app:argType="long" />
+	</fragment>
 
 </navigation>
