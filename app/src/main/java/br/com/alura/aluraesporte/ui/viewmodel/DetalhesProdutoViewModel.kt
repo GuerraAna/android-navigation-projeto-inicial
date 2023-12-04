@@ -9,5 +9,4 @@ class DetalhesProdutoViewModel(
 ) : ViewModel() {
 
     val produtoEncontrado = repository.buscaPorId(produtoId)
-
 }

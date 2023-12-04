@@ -3,7 +3,6 @@ package br.com.alura.aluraesporte.database.converter
 import androidx.room.TypeConverter
 import java.math.BigDecimal
 
-
 class ConversorBigDecimal {
 
     @TypeConverter
@@ -15,5 +14,4 @@ class ConversorBigDecimal {
     fun paraString(valor: String?): BigDecimal {
         return valor?.let { BigDecimal(it) } ?: BigDecimal.ZERO
     }
-
 }

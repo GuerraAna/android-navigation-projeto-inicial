@@ -11,5 +11,4 @@ class PagamentoViewModel(
 
     fun salva(pagamento: Pagamento) = pagamentoRepository.salva(pagamento)
     fun buscaProdutoPorId(id: Long) = produtodRepository.buscaPorId(id)
-
 }

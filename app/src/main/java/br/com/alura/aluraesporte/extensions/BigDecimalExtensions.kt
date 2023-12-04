@@ -2,7 +2,7 @@ package br.com.alura.aluraesporte.extensions
 
 import java.math.BigDecimal
 import java.text.DecimalFormat
-import java.util.*
+import java.util.Locale
 
 fun BigDecimal.formatParaMoedaBrasileira(): String {
     val formatoBrasileiro = DecimalFormat

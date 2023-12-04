@@ -11,7 +11,9 @@ import androidx.navigation.fragment.navArgs
 import br.com.alura.aluraesporte.R
 import br.com.alura.aluraesporte.extensions.formatParaMoedaBrasileira
 import br.com.alura.aluraesporte.ui.viewmodel.DetalhesProdutoViewModel
-import kotlinx.android.synthetic.main.detalhes_produto.*
+import kotlinx.android.synthetic.main.detalhes_produto.detalhes_produto_botao_comprar
+import kotlinx.android.synthetic.main.detalhes_produto.detalhes_produto_nome
+import kotlinx.android.synthetic.main.detalhes_produto.detalhes_produto_preco
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 

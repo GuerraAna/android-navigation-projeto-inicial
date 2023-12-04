@@ -9,5 +9,4 @@ class ProdutoRepository(private val dao: ProdutoDAO) {
     fun buscaTodos(): LiveData<List<Produto>> = dao.buscaTodos()
 
     fun buscaPorId(id: Long): LiveData<Produto> = dao.buscaPorId(id)
-
 }

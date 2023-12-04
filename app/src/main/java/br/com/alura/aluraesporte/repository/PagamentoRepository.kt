@@ -22,5 +22,4 @@ class PagamentoRepository(private val dao: PagamentoDAO) {
             }
         }
     }
-
 }

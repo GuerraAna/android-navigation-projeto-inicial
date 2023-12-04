@@ -8,7 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.alura.aluraesporte.R
 import br.com.alura.aluraesporte.extensions.formatParaMoedaBrasileira
 import br.com.alura.aluraesporte.model.Produto
-import kotlinx.android.synthetic.main.item_produto.view.*
+import kotlinx.android.synthetic.main.item_produto.view.item_produto_nome
+import kotlinx.android.synthetic.main.item_produto.view.item_produto_preco
 
 class ProdutosAdapter(
     private val context: Context,
@@ -58,7 +59,5 @@ class ProdutosAdapter(
             campoNome.text = produto.nome
             campoPreco.text = produto.preco.formatParaMoedaBrasileira()
         }
-
     }
-
 }
