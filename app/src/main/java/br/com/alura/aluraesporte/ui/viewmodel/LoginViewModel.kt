@@ -1,0 +1,18 @@
+package br.com.alura.aluraesporte.ui.viewmodel
+
+import androidx.lifecycle.ViewModel
+import br.com.alura.aluraesporte.repository.LoginRepository
+
+/**
+ *
+ */
+internal class LoginViewModel(private val repository: LoginRepository) : ViewModel() {
+
+    fun loga() = repository.loga()
+
+    fun estaLogado(): Boolean = repository.estaLogado()
+
+    fun desloga() = repository.desloga()
+
+    fun naoEstaLogado(): Boolean = !estaLogado()
+}

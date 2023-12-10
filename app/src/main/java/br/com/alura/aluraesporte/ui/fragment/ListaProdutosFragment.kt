@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout.VERTICAL
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -19,7 +18,7 @@ import org.koin.android.viewmodel.ext.android.viewModel
 /**
  *
  */
-class ListaProdutosFragment : Fragment() {
+internal class ListaProdutosFragment : BaseFragment() {
 
     private val viewModel: ProdutosViewModel by viewModel()
     private val adapter: ProdutosAdapter by inject()
