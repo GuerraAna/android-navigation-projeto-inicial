@@ -9,7 +9,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
-class PagamentoRepository(private val dao: PagamentoDAO) {
+internal class PagamentoRepository(private val dao: PagamentoDAO) {
 
     private val job = Job()
     private val scope = CoroutineScope(Dispatchers.IO + job)
@@ -22,4 +22,6 @@ class PagamentoRepository(private val dao: PagamentoDAO) {
             }
         }
     }
+
+    fun todos(): LiveData<List<Pagamento>> = dao.todos()
 }

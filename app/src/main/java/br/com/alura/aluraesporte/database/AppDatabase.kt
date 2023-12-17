@@ -15,7 +15,7 @@ import br.com.alura.aluraesporte.model.Produto
     exportSchema = false
 )
 @TypeConverters(ConversorBigDecimal::class)
-abstract class AppDatabase : RoomDatabase() {
-    abstract fun produtoDao(): ProdutoDAO
-    abstract fun pagamentoDao(): PagamentoDAO
+internal abstract class AppDatabase : RoomDatabase() {
+    internal abstract fun produtoDao(): ProdutoDAO
+    internal abstract fun pagamentoDao(): PagamentoDAO
 }
